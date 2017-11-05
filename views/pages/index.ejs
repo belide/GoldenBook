@@ -1,0 +1,30 @@
+<% include header  %>
+	<form action="/" method="post"  class="ui form">
+		<div class="field">
+			<label for="message">Your golden Message</label>
+			<textarea name="message" id="message"></textarea>		
+		</div>	
+		<button type="sumbit" class="ui blue labeled submit icon button">Submit
+		<i class="icon edit"></i>
+		</button>
+	</form>
+	<div class="ui comments">
+		<h3 class="ui dividing header">Messages</h3>
+		<% for (message of messages) { %>
+		<div class ="comment">
+
+			<div class ="content">
+				<div class ="metadata">
+					<div class ="date"><%= message.created_at.fromNow() %></div>	
+				</div>	
+				<div class ="text">
+					<a href="/message/<%= message.id %>">
+						<i class="user circle outline large icon"></i>
+					</a>
+					 <%= message.content %>		
+				</div>	
+			</div>
+		</div>
+		<%}%>
+	</div>
+<% include footer  %>

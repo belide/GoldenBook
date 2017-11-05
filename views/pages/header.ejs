@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Golden Book 2017 &copy by medunes</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/semantic.min.css">
+	</head>
+	<body>
+		<div class="ui fixed inverted menu">
+	 		<a href="/" class="menu active item red">Golden Book 2017 &copy by medunes</a>
+	 	</div>
+	 	<div class="ui main container" style = "margin-top: 7em;" >
+	 	<% if (locals.flash && locals.flash.error ) {%>
+		 	<div class="ui negative message">
+		 		<%= flash.error %>
+		 	</div>
+	 	<% } %>
+	 	<% if (locals.flash && locals.flash.success ) {%>
+		 	<div class="ui positive message">
+		 		<%= flash.success %>
+		 	</div>
+	 	<% } %>

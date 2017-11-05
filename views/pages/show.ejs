@@ -1,0 +1,17 @@
+<% include ../pages/header %>
+	<div class="ui comments">
+  		<div class ="comment">
+			<div class ="content">
+				<div class ="metadata">
+					<div class ="date"><%= message.created_at.fromNow() %></div>	
+				</div>	
+				<div class ="text">
+					<a href="/message/<%= message.id %>">
+						<i class="user circle outline large icon"></i>
+					</a>
+					 <%= message.content %>		
+				</div>	
+			</div>
+		</div>
+ 	</div>
+<% include footer  %>
