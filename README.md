@@ -4,7 +4,7 @@ A basic web application using Node & ExpressJS.
 
 Configuration
 -------------
-1- Run: 
+1- 
 
 ```
 # npm install
